@@ -209,7 +209,10 @@ Siga ESTRITAMENTE a estrutura Markdown abaixo para a saída (mantenha exatamente
 | [Nome da Etapa mapeada] | [O que deve ser verificado obrigatoriamente] | [Quando a etapa é considerada concluída corretamente] |
 
 MUITO IMPORTANTE: Após toda a estrutura de texto acima, gere também um fluxograma sequencial do processo utilizando a sintaxe do Mermaid.js (coloque-o dentro de um bloco de código \`\`\`mermaid ... \`\`\`).
-REGRA PARA O MERMAID: Você DEVE obrigatoriamente colocar todos os textos dos nós entre aspas duplas para evitar erros de sintaxe com caracteres especiais ou parênteses. Exemplo correto: A["Lote (300)"] --> B{"Decisão?"} . Nunca use: A[Lote (300)] --> B{Decisão?}.`;
+REGRA CRÍTICA PARA O MERMAID: Você DEVE obrigatoriamente colocar ABSOLUTAMENTE TODOS os textos dos nós entre aspas duplas para evitar erros de sintaxe com caracteres especiais ou parênteses. 
+Exemplo correto: A["Lote (300)"] --> B{"Abaixo do lote mínimo (300 unidades)?"}
+Exemplo INCORRETO (gera erro): A[Lote (300)] --> B{Abaixo do lote mínimo (300 unidades)?}
+Você está PROIBIDO de gerar textos de nós sem aspas duplas.`;
 
     if (rawInput.trim()) {
       parts.push({
