@@ -1,0 +1,5 @@
+{
+  "name": "Guirado - Análise Operacional AI",
+  "description": "Plataforma de apoio à consultoria empresarial para análise operacional em 5 etapas, com inteligência artificial.",
+  "requestFramePermissions": ["microphone"]
+}
